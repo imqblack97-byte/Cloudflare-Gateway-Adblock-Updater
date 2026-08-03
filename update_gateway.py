@@ -59,12 +59,23 @@ session.headers.update(headers)
 blocklists: List[Dict[str, str]] = [
     {
         "name": "Hagezi Pro++",
-        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.plus-onlydomains.txt",
-        "backup_url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro.plus-onlydomains.txt",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/pro.plus.txt",
+        "backup_url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/pro.plus.txt",
         "priority": 10000
+    },
+    {
+        "name": "Hagezi NSFW",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/nsfw.txt",
+        "backup_url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/nsfw.txt",
+        "priority": 10001
+    },
+    {
+        "name": "Hagezi TIF Threat Intelligence",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt",
+        "backup_url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/tif.txt",
+        "priority": 10002
     }
 ]
-
 # Version tracking functions
 def extract_version_from_description(description: str) -> Optional[str]:
     """
